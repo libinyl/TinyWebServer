@@ -5,13 +5,12 @@
 
 using namespace std;
 
-class Config
-{
-public:
+class Config {
+  public:
     Config();
-    ~Config(){};
+    ~Config() = default;
 
-    void parse_arg(int argc, char*argv[]);
+    void parse_arg(int argc, char *argv[]);
 
     //端口号
     int PORT;
@@ -22,10 +21,10 @@ public:
     //触发组合模式
     int TRIGMode;
 
-    //listenfd触发模式
+    // listenfd触发模式
     int LISTENTrigmode;
 
-    //connfd触发模式
+    // connfd触发模式
     int CONNTrigmode;
 
     //优雅关闭链接

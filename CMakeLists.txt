@@ -3,6 +3,6 @@ project(TinyWebServer CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB SOURCEFILE *.cpp)
+file(GLOB_RECURSE SOURCEFILE *.cpp)
 add_executable(server ${SOURCEFILE})
 target_link_libraries(server pthread mysqlclient)
