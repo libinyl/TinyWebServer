@@ -3,6 +3,5 @@ project(TinyWebServer CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB SOURCEFILE *.cpp timer/*.cpp threadpool/*.cpp http/*.cpp log/*.cpp lock/*.cpp CGImysql/*.cpp)
-add_executable(server ${SOURCEFILE})
+add_executable(server ./timer/lst_timer.cpp ./http/http_conn.cpp ./log/log.cpp ./CGImysql/sql_connection_pool.cpp  webserver.cpp config.cpp main.cpp)
 target_link_libraries(server pthread mysqlclient)
